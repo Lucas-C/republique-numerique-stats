@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+    <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    <script type="text/javascript">
+    window.onload = function () {
+        var totalVotesCount = 71940 + 10735 + 5947;
+        new CanvasJS.Chart("chartContainer1", {
+            title:{
+                text: "Total count of votes for proposals on republique-numerique.fr"
+            },
+            exportFileName: "Pie Chart",
+            exportEnabled: true,
+                    animationEnabled: true,
+            legend: {
+                verticalAlign: "bottom",
+                horizontalAlign: "center"
+            },
+            data: [
+            {
+                type: "pie",
+                showInLegend: true,
+                toolTipContent: "{legendText}",
+                indexLabel: "{label} {y}%",
+                dataPoints: [
+                    {
+                        color: '#53A976',
+                        y: (71940 * 100 / totalVotesCount).toFixed(2),
+                        legendText: "Count of favorable votes: 71940",
+                        label: "Count of OK votes"
+                    },
+                    {
+                        color: '#20575F',
+                        y: (10735 * 100 / totalVotesCount).toFixed(2),
+                        legendText: "Count of unfavorable votes: 10735",
+                        label: "Count of KO votes"
+                    },
+                    {
+                        color: '#EFEE69',
+                        y: (5947 * 100 / totalVotesCount).toFixed(2),
+                        legendText: "Count of reserved votes : 5947",
+                        label: "Count of MITIGE votes"
+                    }
+                ]
+            }
+        ]
+        }).render();
+        var totalArgumentsCount = 1960 + 2034;
+        new CanvasJS.Chart("chartContainer2", {
+            title:{
+                text: "Total count of arguments FOR & AGAINST proposals on republique-numerique.fr"
+            },
+            exportFileName: "Pie Chart",
+            exportEnabled: true,
+                    animationEnabled: true,
+            legend: {
+                verticalAlign: "bottom",
+                horizontalAlign: "center"
+            },
+            data: [
+            {
+                type: "pie",
+                showInLegend: true,
+                toolTipContent: "{legendText}",
+                indexLabel: "{label} {y}%",
+                dataPoints: [
+                    {
+                        color: '#74ADD1',
+                        y: (1960 * 100 / totalArgumentsCount).toFixed(2),
+                        legendText: "Count of YES arguments: 1960",
+                        label: "Count of YES arguments"
+                    },
+                    {
+                        color: '#D73027',
+                        y: (2034 * 100 / totalArgumentsCount).toFixed(2),
+                        legendText: "Count of NO arguments: 2034",
+                        label: "Count of NO arguments"
+                    }
+                ]
+            }
+        ]
+        }).render();
+    }
+    </script>
+</body>
+</html>
+
