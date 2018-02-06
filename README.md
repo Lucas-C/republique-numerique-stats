@@ -1,4 +1,4 @@
-cf. https://chezsoi.org/lucas/blog/2015/10/19/fr-visualisation-des-votes-sur-republique-numeriquefr/
+cf. https://chezsoi.org/lucas/blog/visualisation-des-votes-sur-republique-numeriquefr
 
 With a bit of dichotomy, the full IDs range of the /opinions resource on 2015/10/18 seems to be 61-782.
 
